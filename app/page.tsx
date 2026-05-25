@@ -46,7 +46,10 @@ const sections = [
     items: [
       {
         name: "日常",
-        links: [{ label: "TikTok", url: "https://vt.tiktok.com/ZSxmWFCkR/" }],
+        links: [
+          { label: "TikTok", url: "https://vt.tiktok.com/ZSxmWFCkR/" },
+          { label: "TikTok", url: "https://vt.tiktok.com/ZSxHD99kr/" },
+        ]
       },
       {
         name: "紀錄片",
