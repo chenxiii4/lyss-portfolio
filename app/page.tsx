@@ -274,14 +274,14 @@ export default function Home() {
       style={{ fontFamily: handwriting.style.fontFamily }}
       className="text-[80px] md:text-[120px] text-[#78856E] leading-none"
     >
-      Lyss
+      Lyss Portfolio
     </h1>
 
     <h2
       style={{ fontFamily: serif.style.fontFamily }}
       className="text-[#444] text-xl md:text-3xl mt-6"
     >
-      Portfolio · Full Production (Planning / Filming / Editing)
+      Full Production (Planning / Filming / Editing)
     </h2>
 
     <div className="mt-16 text-[#78856E]">↓</div>
