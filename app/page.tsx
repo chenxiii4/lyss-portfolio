@@ -166,10 +166,10 @@ const sections = [
       {
         name: "探店系列",
         links: [
-          { label: "高雄小吃", url: "https://vt.tiktok.com/ZSxmWuFpd/" },
-          { label: "嘉義餐廳", url: "https://vt.tiktok.com/ZSxmWG7NA/" },
+          { label: "高雄麵店", url: "https://vt.tiktok.com/ZSxmWuFpd/" },
+          { label: "嘉義蟹黃拌麵", url: "https://vt.tiktok.com/ZSxmWG7NA/" },
           { label: "眼鏡行", url: "https://vt.tiktok.com/ZSxmceHHb/" },
-          { label: "嘉義小吃", url: "https://vt.tiktok.com/ZSxmc9JDP/" },
+          { label: "嘉義火雞肉飯", url: "https://vt.tiktok.com/ZSxmc9JDP/" },
         ],
       },
     ],
@@ -182,7 +182,7 @@ const sections = [
         name: "旅遊",
         links: [
           {
-            label: "YouTube",
+            label: "玉山",
             url: "https://youtu.be/Lx5pq5xSokU",
           },
         ],
@@ -191,7 +191,7 @@ const sections = [
         name: "日常",
         links: [
           {
-            label: "YouTube",
+            label: "簡約風格",
             url: "https://youtu.be/zAmvaAPkWBA?si=KBZWPdGBfZtuf6IC",
           },
         ],
