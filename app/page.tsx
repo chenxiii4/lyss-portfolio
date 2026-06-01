@@ -2,19 +2,103 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { Caveat, Cinzel } from "next/font/google";
+import { Caveat, Cormorant_Garamond } from "next/font/google";
 
 const handwriting = Caveat({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
 
-const cinematicSerif = Cinzel({
+const serif = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["400", "500"],
+  weight: ["300", "400", "500", "600"],
 });
 
-/* ───────── DATA ───────── */
+/* ---------- 🌿 植物插畫（綠色質感版） ---------- */
+
+function PlantLeft() {
+  return (
+    <svg
+      className="absolute left-[-120px] top-16 w-[380px] opacity-30"
+      viewBox="0 0 200 400"
+      fill="none"
+    >
+      <path
+        d="M110 390 C95 320, 140 260, 110 190 C85 130, 120 80, 105 20"
+        stroke="#6F8F6A"
+        strokeWidth="1.2"
+        strokeLinecap="round"
+      />
+      <path
+        d="M110 300 C70 285, 60 260, 95 245"
+        stroke="#7FA77A"
+        strokeWidth="1"
+        strokeLinecap="round"
+      />
+      <path
+        d="M110 240 C150 225, 160 200, 125 185"
+        stroke="#6F8F6A"
+        strokeWidth="1"
+        strokeLinecap="round"
+      />
+      <path
+        d="M110 185 C75 170, 60 145, 90 130"
+        stroke="#8FBF86"
+        strokeWidth="0.9"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+function PlantRight() {
+  return (
+    <svg
+      className="absolute right-[-140px] top-32 w-[420px] opacity-20"
+      viewBox="0 0 200 400"
+      fill="none"
+    >
+      <path
+        d="M100 390 C120 310, 80 250, 105 185 C130 120, 90 70, 110 20"
+        stroke="#6F8F6A"
+        strokeWidth="1.1"
+        strokeLinecap="round"
+      />
+      <path
+        d="M105 270 C145 250, 165 230, 130 210"
+        stroke="#7FA77A"
+        strokeWidth="0.9"
+        strokeLinecap="round"
+      />
+      <path
+        d="M105 210 C70 190, 50 165, 85 145"
+        stroke="#8FBF86"
+        strokeWidth="0.9"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+function PlantBottom() {
+  return (
+    <svg
+      className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 w-[700px] opacity-15"
+      viewBox="0 0 600 200"
+      fill="none"
+    >
+      <path
+        d="M0 160 C120 110, 180 190, 300 150 C420 110, 480 190, 600 140"
+        stroke="#6F8F6A"
+        strokeWidth="1.2"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+/* ---------- DATA（完整保留） ---------- */
+
 const sections = [
   {
     title: "拍攝 × 企劃 × 剪輯 全案製作",
@@ -30,30 +114,54 @@ const sections = [
         ],
       },
       {
-        name: "療癒自己的一百件事",
+        name: "體驗陌生人的一天",
         subtitle: "",
         links: [
           {
             label: "Instagram Reel",
-            url: "https://www.instagram.com/reel/DVYZrwvEokB/",
+            url: "https://www.instagram.com/reel/DZCqoxOBEn3/?igsh=MTltMmZ0NXNwOGc5eA==/",
           },
         ],
       },
     ],
   },
+
+  {
+    title: "拍攝 × 剪輯作品",
+    items: [
+      {
+        name: "車業",
+        links: [
+          { label: "重機介紹",
+            url: "https://www.instagram.com/reel/DY6hl6ZBxMO/?igsh=MWdobnlseDFrazF2cw==" 
+          },
+        ],
+      },
+    ],
+  },
+
   {
     title: "剪輯作品",
     items: [
       {
         name: "日常",
         links: [
-          { label: "TikTok", url: "https://vt.tiktok.com/ZSxmWFCkR/" },
-          { label: "TikTok", url: "https://vt.tiktok.com/ZSxHD99kr/" },
-        ]
+          { label: "搞笑影片", url: "https://vt.tiktok.com/ZSxmWFCkR/" },
+          { label: "互動影片", url: "https://vt.tiktok.com/ZSxHD99kr/" },
+        ],
+      },
+      {
+        name: "賣東西",
+        links: [
+          { label: "行李箱", url: "https://vt.tiktok.com/ZSxc4ggn2/" },
+          { label: "LED書包", url: "https://vt.tiktok.com/ZSxc4gJX2/" },
+        ],
       },
       {
         name: "紀錄片",
-        links: [{ label: "TikTok", url: "https://vt.tiktok.com/ZSxmWMjY6/" }],
+        links: [
+          { label: "TikTok", url: "https://vt.tiktok.com/ZSxmWMjY6/" },
+        ],
       },
       {
         name: "探店系列",
@@ -66,185 +174,192 @@ const sections = [
       },
     ],
   },
+
   {
     title: "長片 Vlog",
-    subtitle: "拍攝 / 企劃 / 剪輯",
     items: [
       {
         name: "旅遊",
-        links: [{ label: "YouTube", url: "https://youtu.be/Lx5pq5xSokU" }],
+        links: [
+          {
+            label: "YouTube",
+            url: "https://youtu.be/Lx5pq5xSokU",
+          },
+        ],
       },
       {
         name: "日常",
-        links: [{ label: "YouTube", url: "https://youtu.be/_11r3NGsjWA" }],
+        links: [
+          {
+            label: "YouTube",
+            url: "https://youtu.be/zAmvaAPkWBA?si=KBZWPdGBfZtuf6IC",
+          },
+        ],
       },
     ],
   },
 ];
 
-/* ───────── STARS ───────── */
-function HeaderStars() {
-  return (
-    <div className="absolute inset-0 pointer-events-none">
-      <div className="absolute top-10 left-8 text-white/40 text-xs">✦</div>
-      <div className="absolute top-16 right-10 text-yellow-200/50 text-xs">✧</div>
-      <div className="absolute bottom-20 left-1/4 text-white/20 text-[10px]">✦</div>
-    </div>
-  );
-}
+/* ---------- CARD ---------- */
 
-/* ───────── CARD ───────── */
 function WorkCard({ item }: any) {
   const [open, setOpen] = useState(false);
 
   return (
-    <motion.div whileHover={{ y: -3 }} className="flex justify-center">
+    <motion.div whileHover={{ y: -4 }} transition={{ duration: 0.3 }}>
       <div
         onClick={() => setOpen(!open)}
-        className="relative cursor-pointer bg-white w-full max-w-sm shadow-[0_10px_28px_rgba(0,0,0,0.45)]"
+        className="
+          cursor-pointer
+          bg-[#faf8f2]
+          border border-[#d9d6cf]
+          p-7 min-h-[220px]
+          hover:border-[#78856E]
+          transition-all
+        "
       >
-        <div className="bg-black text-white p-3 relative min-h-[150px]">
-          <div className="absolute inset-0 opacity-[0.04] pointer-events-none grain" />
+        <h3 className="text-[#3b3b3b] text-xl mb-2">{item.name}</h3>
 
-          <div className="flex justify-between items-start relative z-10">
-            <div className="flex flex-col gap-1">
-              <span className="text-base font-extralight">{item.name}</span>
+        {item.subtitle && (
+          <p className="text-[#8a8a8a] text-sm">{item.subtitle}</p>
+        )}
 
-              {item.subtitle && (
-                <span className="text-white/35 text-[11px]">
-                  {item.subtitle}
-                </span>
-              )}
-            </div>
+        <div className="mt-12 text-[#78856E] text-sm tracking-widest uppercase">
+          {open ? "Close ↑" : "View Collection ↓"}
+        </div>
 
-            <span className="text-white/25 text-xs">
-              {open ? "−" : "+"}
-            </span>
-          </div>
-
-          <AnimatePresence>
-            {open && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                className="mt-3 flex flex-col gap-2 relative z-10"
-              >
+        <AnimatePresence>
+          {open && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              className="overflow-hidden"
+            >
+              <div className="pt-6 flex flex-col gap-3">
                 {item.links.map((link: any, i: number) => (
                   <a
                     key={i}
                     href={link.url}
                     target="_blank"
-                    className="text-[11px] text-white/60 hover:text-white transition"
+                    className="text-[#5f6b58] hover:text-black text-sm"
                   >
-                    {link.label}
+                    ↘ {link.label}
                   </a>
                 ))}
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-
-        <div className="h-6 bg-white border-t border-black/5" />
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </motion.div>
   );
 }
 
-/* ───────── PAGE ───────── */
+/* ---------- PAGE ---------- */
+
 export default function Home() {
   return (
-    <main className="bg-black text-white min-h-screen relative overflow-hidden">
+    <main className="bg-[#f7f6f1] min-h-screen relative overflow-hidden">
 
-      {/* frame */}
-      <div className="pointer-events-none fixed inset-0 z-50">
-        <div className="absolute inset-3 border border-white/10" />
-      </div>
+      {/* HERO */}
+<section className="min-h-screen flex items-center justify-center px-8 relative">
+  <PlantLeft />
+  <PlantRight />
 
-      {/* grain */}
-      <div className="grain fixed inset-0 opacity-[0.035] pointer-events-none" />
+  <div className="text-center max-w-3xl z-10">
+    <div className="text-[#78856E] text-3xl mb-8">❀</div>
 
-      {/* ───────── HERO ───────── */}
-      <div className="relative h-[60vh] flex flex-col justify-center items-center">
+    <h1
+      style={{ fontFamily: handwriting.style.fontFamily }}
+      className="text-[80px] md:text-[120px] text-[#78856E] leading-none"
+    >
+      Lyss
+    </h1>
 
-        <HeaderStars />
+    <h2
+      style={{ fontFamily: serif.style.fontFamily }}
+      className="text-[#444] text-xl md:text-3xl mt-6"
+    >
+      Portfolio · Full Production (Planning / Filming / Editing)
+    </h2>
 
-        {/* LYSS FILMS */}
-        <div className="absolute top-10 flex flex-col items-center gap-1 opacity-70">
-          <div className="text-white text-sm">✦</div>
-          <span className="text-[10px] tracking-[0.5em] uppercase">
-            LYSS FILMS
-          </span>
-        </div>
+    <div className="mt-16 text-[#78856E]">↓</div>
+  </div>
+</section>
 
-        <motion.div className="text-center px-6">
-          <h1
-            style={{ fontFamily: handwriting.style.fontFamily }}
-            className="text-[13vw] md:text-[8vw] text-[#F3C63F] leading-[0.8]"
-          >
-            Lyss Portfolio
-          </h1>
+      {/* ABOUT */}
+<section className="max-w-5xl mx-auto px-8 pb-28 relative">
+  <div className="border-t border-[#d9d6cf] pt-16">
+    <p className="text-[#666] leading-9 max-w-2xl">
+      嗨，我是 Lyss。用剪輯建立敘事節奏，依照品牌需求與人物特性，製作適合的影像風格。
+    </p>
+  </div>
+</section>
 
-          <p
-            style={{ fontFamily: cinematicSerif.style.fontFamily }}
-            className="text-[10px] tracking-[0.4em] uppercase text-white/70 mt-5"
-          >
-            Film Photobooth Portfolio
-          </p>
-        </motion.div>
+      {/* WORKS */}
+      <section className="max-w-6xl mx-auto px-8 pb-32 relative">
+        <div className="space-y-24">
 
-        {/* scroll indicator */}
-        <div className="absolute bottom-6 flex flex-col items-center gap-1 text-white/40 animate-pulse">
-          <span className="text-[10px] tracking-[0.4em] uppercase">
-            Scroll
-          </span>
-          <div className="text-sm">↓</div>
-        </div>
-      </div>
+          {sections.map((section) => (
+            <div key={section.title}>
 
-      {/* GRID */}
-      <div className="px-6 md:px-20 pb-28 max-w-6xl mx-auto space-y-16">
-        {sections.map((section) => (
-          <div key={section.title}>
-            <h2 className="text-[10px] uppercase tracking-[0.4em] text-[#F3C63F] mb-6">
-              {section.title}
-            </h2>
+              <div className="mb-10">
+                <div className="text-[#78856E] mb-3">❀</div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-              {section.items.map((item, i) => (
-                <WorkCard key={i} item={item} />
-              ))}
+                <h2
+                  style={{ fontFamily: serif.style.fontFamily }}
+                  className="text-3xl text-[#333]"
+                >
+                  {section.title}
+                </h2>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                {section.items.map((item, i) => (
+                  <WorkCard key={i} item={item} />
+                ))}
+              </div>
+
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
 
-      {/* CONTACT（只留 Email） */}
-      <div className="px-6 md:px-20 pb-20 max-w-6xl mx-auto border-t border-white/10 pt-16">
-
-        <h2 className="text-[10px] uppercase tracking-[0.4em] text-[#F3C63F] mb-6">
-          Contact
-        </h2>
-
-        <div className="text-white/60 text-sm">
-          <p>
-            Email:{" "}
-            <a
-              className="hover:text-white transition"
-              href="mailto:lyssss2521@gmail.com"
-            >
-              lyssss2521@gmail.com
-            </a>
-          </p>
         </div>
-      </div>
+      </section>
 
-      {/* grain */}
-      <style jsx global>{`
-        .grain {
-          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-        }
-      `}</style>
+      {/* CONTACT */}
+<section className="max-w-6xl mx-auto px-8 pb-32 relative">
+  <PlantBottom />
+
+  <div className="border-t border-[#d9d6cf] pt-16 relative z-10">
+    <div className="text-[#78856E] mb-3">❀</div>
+
+    <h2
+      style={{ fontFamily: serif.style.fontFamily }}
+      className="text-3xl text-[#333]"
+    >
+      Contact
+    </h2>
+
+    <p className="mt-8 text-[#666]">Email</p>
+
+    <a
+      href="mailto:lyssss2521@gmail.com"
+      className="text-[#78856E] text-lg hover:opacity-70 block"
+    >
+      lyssss2521@gmail.com
+    </a>
+
+    <p className="mt-6 text-[#666]">LINE</p>
+
+    <a
+      target="_blank"
+      className="text-[#78856E] text-lg hover:opacity-70 block"
+    >
+      b.nezero
+    </a>
+  </div>
+</section>
 
     </main>
   );
