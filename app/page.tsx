@@ -144,7 +144,7 @@ const sections = [
     title: "剪輯作品",
     items: [
       {
-        name: "日常",
+        name: "日常綜藝感",
         links: [
           { label: "搞笑影片", url: "https://vt.tiktok.com/ZSxmWFCkR/" },
           { label: "互動影片", url: "https://vt.tiktok.com/ZSxHD99kr/" },
