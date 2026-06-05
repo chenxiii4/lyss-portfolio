@@ -132,9 +132,10 @@ const sections = [
       {
         name: "車業",
         links: [
-          { label: "重機介紹",
-            url: "https://www.instagram.com/reel/DY6hl6ZBxMO/?igsh=MWdobnlseDFrazF2cw==" 
-          },
+          { label: "重機介紹凱旋Daytona660",
+            url: "https://www.instagram.com/reel/DZKCVCRP5iQ/?igsh=MTVmbDc2b2Zrcjc1cQ==" },
+            { label: "重機介紹r15",
+              url: "https://www.instagram.com/reel/DY6hl6ZBxMO/?igsh=MWdobnlseDFrazF2cw==" },
         ],
       },
     ],
