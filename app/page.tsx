@@ -156,6 +156,7 @@ const sections = [
         links: [
           { label: "行李箱", url: "https://vt.tiktok.com/ZSxc4ggn2/" },
           { label: "LED書包", url: "https://vt.tiktok.com/ZSxc4gJX2/" },
+          { label: "刀具組", url: "https://vt.tiktok.com/ZSQdoqAMJ/" },
         ],
       },
       {
