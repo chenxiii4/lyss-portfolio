@@ -138,6 +138,13 @@ const sections = [
               url: "https://www.instagram.com/reel/DY6hl6ZBxMO/?igsh=MWdobnlseDFrazF2cw==" },
         ],
       },
+        {
+          name: "探店",
+          links: [
+            { label: "飯店介紹",
+              url: "https://www.instagram.com/reel/DZpI8OkgASS/?igsh=dzh1M2N1MG91YTdy" },
+          ],
+      },
     ],
   },
 
@@ -149,6 +156,7 @@ const sections = [
         links: [
           { label: "搞笑影片", url: "https://vt.tiktok.com/ZSxmWFCkR/" },
           { label: "互動影片", url: "https://vt.tiktok.com/ZSxHD99kr/" },
+          { label: "搞笑影片", url: "https://vt.tiktok.com/ZSQpcAabJ/" },
         ],
       },
       {
