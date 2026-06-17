@@ -156,7 +156,7 @@ const sections = [
         links: [
           { label: "搞笑影片", url: "https://vt.tiktok.com/ZSxmWFCkR/" },
           { label: "互動影片", url: "https://vt.tiktok.com/ZSxHD99kr/" },
-          { label: "搞笑影片", url: "https://vt.tiktok.com/ZSQpcAabJ/" },
+          { label: "景點介紹", url: "https://vt.tiktok.com/ZSQpcAabJ/" },
         ],
       },
       {
